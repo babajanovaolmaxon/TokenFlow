@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TokenFlow System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="main-title">TokenFlow: Kripto-Simulyator</h1>
+
+    <div class="container">
+        <div class="card">
+            <h2>Kripto-Valyuta Konvertori</h2>
+            <p>Sizda bor dollar (USD) miqdorini kiriting va uni eng mashhur kripto tangalarga xavfsiz hisoblang.</p>
+            
+            <input type="number" id="usdMiqdor" placeholder="Dollar miqdorini kiriting ($)">
+            <select id="tangaTanlov">
+                <option value="">Tangani tanlang...</option>
+                <option value="btc">Bitcoin (1 BTC = $65,000)</option>
+                <option value="eth">Ethereum (1 ETH = $3,500)</option>
+                <option value="ton">Toncoin (1 TON = $7)</option>
+            </select>
+            
+            <button onclick="hisoblaKripto()">Tangaga O'girish</button>
+            <div id="kriptoNatija" class="result"></div>
+        </div>
+
+        <div class="card">
+            <h2>NFT San'at Asari Eksperti</h2>
+            <p>Yaratgan raqamli rasmingiz (NFT) noyobligi va muallifning mashhurligiga qarab uning taxminiy narxini aniqlang.</p>
+            
+            <select id="nftNoyoblik">
+                <option value="">Noyoblik darajasi...</option>
+                <option value="oddiy">Oddiy (Kopiyalar ko'p)</option>
+                <option value=" kamyob">Kamyob (Atigi 10 ta nusxa)</option>
+                <option value="unikal">Unikal (Faqat 1 ta - Noyob)💎</option>
+            </select>
+            <input type="number" id="muallifObunachi" placeholder="Ijtimoiy tarmoqdagi obunachilar soni">
+            
+            <button onclick="baholaNFT()">NFT Narxini Bilish</button>
+            <div id="nftNatija" class="result"></div>
+        </div>
+
+        <div class="card">
+            <h2>Kripto Staking (Foizli Daromad)</h2>
+            <p>Tangalaringizni blokcheyn tarmog'ini qo'llash uchun bloklab (muzlatib), yiliga qancha sof foyda olishingizni hisoblang.</p>
+            
+            <input type="number" id="stakeSumma" placeholder="Muzlatiladigan summa ($)">
+            <input type="number" id="stakeOy" placeholder="Necha oyga muzlatiladi?">
+            
+            <button onclick="hisoblaStaking()">Foydani Hisoblash</button>
+            <div id="stakeNatija" class="result"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
